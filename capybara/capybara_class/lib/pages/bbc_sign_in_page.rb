@@ -11,6 +11,16 @@ class BbcSignInPage
 
 	INCORRECT_PASSWORD_TEXT_ID = 'form-message-username'
 
+	DETAILS_ERROR = 'form-message-general'
+
+	MISSING_USERNAME = 'form-message-username'
+
+	MISSING_PASSWORD = 'form-message-password'
+
+	SHORT_USERNAME = 'form-message-username'
+
+	SHORT_PASSWORD = 'form-message-password'
+
 	def fill_in_username(username) 
 		fill_in(USERNAME_ID, with: username)
 
@@ -28,4 +38,23 @@ class BbcSignInPage
         find(:id, INCORRECT_PASSWORD_TEXT_ID).text
 	end
 
+	def missing_details_text
+        find(:id, DETAILS_ERROR).text
+	end
+
+	def missing_username_text
+        find(:id, MISSING_USERNAME).text
+	end
+
+	def missing_password_text
+        find(:id, MISSING_PASSWORD).text
+	end
+
+	def short_username_text
+        find(:id, SHORT_USERNAME).text
+	end
+
+	def short_password_text
+        find(:id, SHORT_PASSWORD).text
+	end
 end
